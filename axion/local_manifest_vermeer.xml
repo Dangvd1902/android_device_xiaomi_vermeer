@@ -5,6 +5,8 @@
   <remote name="vermeer-github" fetch="https://github.com/" />
   <project name="Dangvd1902/android_device_xiaomi_vermeer" path="device/xiaomi/vermeer" remote="vermeer-github" revision="axion-android17" />
   <project name="Dangvd1902/android_device_xiaomi_sm8550-common" path="device/xiaomi/sm8550-common" remote="vermeer-github" revision="axion-android17" />
+  <project name="TheMuppets/proprietary_vendor_xiaomi_vermeer" path="vendor/xiaomi/vermeer" remote="vermeer-github" revision="lineage-24.0" />
+  <project name="TheMuppets/proprietary_vendor_xiaomi_sm8550-common" path="vendor/xiaomi/sm8550-common" remote="vermeer-github" revision="lineage-24.0" />
   <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="vermeer-github" revision="lineage-24.0" />
   <project name="LineageOS/android_kernel_xiaomi_sm8550" path="kernel/xiaomi/sm8550" remote="vermeer-github" revision="lineage-24.0" />
   <project name="LineageOS/android_kernel_xiaomi_sm8550-devicetrees" path="kernel/xiaomi/sm8550-devicetrees" remote="vermeer-github" revision="lineage-24.0" />
