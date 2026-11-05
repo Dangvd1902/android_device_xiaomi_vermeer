@@ -15,7 +15,7 @@ repo sync -c -j8 --fail-fast
 
 ## Not yet resolved
 
-- Proprietary trees `vendor/xiaomi/vermeer` and `vendor/xiaomi/sm8550-common` are required by the device BoardConfig/product makefiles. Do not assume they exist in the AxionOS manifest.
+- The local manifest now includes TheMuppets proprietary trees for `vendor/xiaomi/vermeer` and `vendor/xiaomi/sm8550-common` on `lineage-24.0`. Their completeness and compatibility with AxionOS remain unverified.
 - Confirm that AxionOS `lineage-24.0` has all expected framework/build changes and that the product naming convention is supported.
 - Check manifest path conflicts with upstream projects before sync.
 - Verify boot, radio, camera, fingerprint, sensors, SELinux and firmware on hardware before release.
