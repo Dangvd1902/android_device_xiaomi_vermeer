@@ -1,0 +1,22 @@
+name: Import LineageOS Android 17 source
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Import upstream branch without overwriting main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --single-branch --branch lineage-24.0 https://github.com/LineageOS/android_device_xiaomi_vermeer.git source
+          cd source
+          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push "https://github.com/$TARGET_REPOSITORY.git" HEAD:refs/heads/lineage-24.0
+          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push "https://github.com/$TARGET_REPOSITORY.git" HEAD:refs/heads/axion-android17
