@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copy to .repo/local_manifests/vermeer.xml in an AxionOS checkout.
+     Vendor proprietary trees are NOT included and must be supplied separately. -->
+<manifest>
+  <project name="Dangvd1902/android_device_xiaomi_vermeer" path="device/xiaomi/vermeer" remote="github" revision="axion-android17" />
+  <project name="Dangvd1902/android_device_xiaomi_sm8550-common" path="device/xiaomi/sm8550-common" remote="github" revision="axion-android17" />
+  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-24.0" />
+  <project name="LineageOS/android_kernel_xiaomi_sm8550" path="kernel/xiaomi/sm8550" remote="github" revision="lineage-24.0" />
+  <project name="LineageOS/android_kernel_xiaomi_sm8550-devicetrees" path="kernel/xiaomi/sm8550-devicetrees" remote="github" revision="lineage-24.0" />
+  <project name="LineageOS/android_kernel_xiaomi_sm8550-modules" path="kernel/xiaomi/sm8550-modules" remote="github" revision="lineage-24.0" />
+</manifest>
