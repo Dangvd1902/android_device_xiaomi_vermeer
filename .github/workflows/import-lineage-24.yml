@@ -10,7 +10,7 @@ jobs:
   import-source:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone and push upstream source
+      - name: Import source as a self-contained snapshot
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_REPOSITORY: ${{ github.repository }}
@@ -20,6 +20,9 @@ jobs:
           cd source
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan imported-source
+          git add -A
+          git -c commit.gpgsign=false commit -m "Import LineageOS lineage-24.0 source snapshot"
           git remote add destination "https://x-access-token:${GH_TOKEN}@github.com/${TARGET_REPOSITORY}.git"
           git push destination HEAD:refs/heads/lineage-24.0
           git push destination HEAD:refs/heads/axion-android17
